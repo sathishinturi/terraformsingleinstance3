@@ -1,5 +1,5 @@
-aws_access_key = "AKIAJA2CKY3D6IT6QRFQ"
-aws_secret_key = "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"
+aws_access_key = "AKIAJYTTJQAI4RBGRK5A"
+aws_secret_key = "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"
 aws_region = "ap-south-1"
 vpc_cidr = "10.1.0.0/16"
 public_subnet1_cidr = "10.1.5.0/24"
