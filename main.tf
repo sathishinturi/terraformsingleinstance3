@@ -71,7 +71,7 @@ terraform {
  encrypt = true
  bucket = "sathish472"
  region = "ap-south-1"
- key = "pathfile"
+ key = "pathhfile"
  }
 }
 
