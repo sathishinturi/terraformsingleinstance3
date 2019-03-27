@@ -65,6 +65,7 @@ resource "aws_security_group" "allow_all" {
     }
 }
 
+
 # terraform.tf
 terraform {
  backend "s3" {
@@ -75,4 +76,22 @@ terraform {
  }
 }
 
-
+data  "aws_ami" "my_ami" {
+      most_recent      = true
+      #name_regex       = "Sathish"
+      owners           = ["552324437847"]
+}
+resource "aws_instance" "web-1" {
+    ami = "${data.aws_ami.my_ami.id}"
+    availability_zone = "ap-south-1a"
+    instance_type = "t2.micro"
+    key_name = "pri"
+    subnet_id = "${aws_subnet.subnet1-public.id}"
+    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+    associate_public_ip_address = true	
+    tags {
+        Name = "Terraform-Server-${count.index}"
+        Env = "Prod"
+        Owner = "Sathish"
+    }
+}
