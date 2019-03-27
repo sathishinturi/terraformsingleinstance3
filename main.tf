@@ -94,4 +94,10 @@ resource "aws_instance" "web-1" {
         Env = "Prod"
         Owner = "Sathish"
     }
+    
+    tags {
+        Name = "ff"
+        Env = "fff"
+        Owner = "Sathish"
+    }
 }
