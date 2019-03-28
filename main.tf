@@ -70,16 +70,17 @@ resource "aws_security_group" "allow_all" {
 terraform {
  backend "s3" {
  encrypt = true
- bucket = "sathish472"
+ bucket = "sathish483"
  region = "ap-south-1"
- key = "pathhfile"
+ key = "pathhfilee"
  }
 }
+
  
 data "aws_ami" "my_ami" {
       most_recent      = true
       #name_regex       = "Sathish"
-      owners           = ["552324437847"]
+      owners           = ["888454777979"]
 }
 
 
